@@ -6,6 +6,7 @@ from art.estimators.classification import KerasClassifier
 import os
 from tensorflow.keras.preprocessing import image
 
+
 def one_pixel_attack_on_model(model_path, data_dir, num_samples=5):
     # Load model
     model = load_model(model_path)
@@ -61,17 +62,19 @@ def one_pixel_attack_on_model(model_path, data_dir, num_samples=5):
                     'success': success
                 })
                 
-                print(f\"Image: {img_file} | Original: {original_class} ({original_pred:.3f}) | "
-                      f\"Adversarial: {adv_class} ({adv_pred:.3f}) | Success: {success}\")
-                      
+                # ✅ Print details for each image
+                print(f"Image: {img_file} | Original: {original_class} ({original_pred:.3f}) | "
+                      f"Adversarial: {adv_class} ({adv_pred:.3f}) | Success: {success}")
+
             except Exception as e:
-                print(f\"Error processing {img_file}: {e}\")
-    
-    # Print summary
+                print(f"Error processing {img_file}: {e}")
+
+    # ✅ Calculate success rate and print summary
     success_rate = sum(1 for r in results if r['success']) / len(results) if results else 0
-    print(f\"\\nAttack Success Rate: {success_rate:.2%}\")
-    
+    print(f"\nAttack Success Rate: {success_rate:.2%}")
+
     return results
+
 
 # Run the attack
 if __name__ == "__main__":
