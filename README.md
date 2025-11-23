@@ -2,12 +2,12 @@
 
 This project investigates the vulnerability of a deep learning classifier to one-pixel adversarial perturbations and evaluates multiple passive defense techniques designed to improve robustness. The study focuses on a binary Xception-based model trained for casting defect detection.
 
-#One-Pixel Attack
+# One-Pixel Attack
 
 The one-pixel attack is an evasion technique where only a single pixel in the input image is modified. Despite being visually imperceptible, such perturbations can cause misclassification due to model sensitivity.
 
 
-#Attack Method
+# Attack Method
 
 A custom random-search attack is implemented:
 
