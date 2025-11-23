@@ -1,12 +1,13 @@
-Overview
+# Overview
 
 This project investigates the vulnerability of a deep learning classifier to one-pixel adversarial perturbations and evaluates multiple passive defense techniques designed to improve robustness. The study focuses on a binary Xception-based model trained for casting defect detection.
 
-One-Pixel Attack
+#One-Pixel Attack
 
 The one-pixel attack is an evasion technique where only a single pixel in the input image is modified. Despite being visually imperceptible, such perturbations can cause misclassification due to model sensitivity.
 
-Attack Method
+
+#Attack Method
 
 A custom random-search attack is implemented:
 
@@ -22,7 +23,7 @@ An attack is considered successful if the predicted class changes.
 
 This implementation operates independently of gradient information and does not rely on external libraries such as ART.
 
-Defense Techniques
+# Defense Techniques
 
 Multiple passive defenses are applied at the input level. These techniques aim to remove, smooth, or neutralize very small perturbations.
 
@@ -52,11 +53,11 @@ Combines quantization and median filtering to remove unnecessary input complexit
 
 Randomized preprocessing pipelines are applied repeatedly, and predictions are averaged. This reduces the chance that a single perturbation survives all random transformations. A confidence-drop heuristic is used for adversarial detection.
 
-Robust Model Loading
+# Robust Model Loading
 
 The model is stored in an HDF5 file generated with a different Keras version. A custom compatibility layer for SeparableConv2D is included to prevent deserialization errors. If full reconstruction fails, the code rebuilds an Xception-like architecture and loads weights by name.
 
-Evaluation Pipeline
+# Evaluation Pipeline
 
 Clean images are loaded from the dataset.
 
@@ -64,7 +65,7 @@ The one-pixel attack is applied to generate adversarial variants.
 
 The defense method is applied to both clean and adversarial inputs.
 
-Metrics recorded include:
+# Metrics recorded include:
 
 Attack success before defense
 
@@ -74,7 +75,7 @@ Whether the defense flags the sample as suspicious
 
 Summary statistics and plots are generated.
 
-Results Summary
+# Results Summary
 
 The base classifier exhibits substantial vulnerability to one-pixel perturbations.
 
