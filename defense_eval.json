@@ -1,0 +1,62 @@
+[
+  {
+    "image": "cast_def_0_0.jpeg",
+    "class_dir": "def_front",
+    "orig_label": 0,
+    "adv_success_before": false,
+    "defended_label_on_orig": 0,
+    "defended_label_on_adv": 0,
+    "defense_detected_on_orig": false,
+    "defense_detected_on_adv": false
+  },
+  {
+    "image": "cast_def_0_100.jpeg",
+    "class_dir": "def_front",
+    "orig_label": 0,
+    "adv_success_before": false,
+    "defended_label_on_orig": 0,
+    "defended_label_on_adv": 0,
+    "defense_detected_on_orig": false,
+    "defense_detected_on_adv": false
+  },
+  {
+    "image": "cast_def_0_1015.jpeg",
+    "class_dir": "def_front",
+    "orig_label": 0,
+    "adv_success_before": false,
+    "defended_label_on_orig": 0,
+    "defended_label_on_adv": 0,
+    "defense_detected_on_orig": false,
+    "defense_detected_on_adv": false
+  },
+  {
+    "image": "cast_ok_0_1018.jpeg",
+    "class_dir": "ok_front",
+    "orig_label": 0,
+    "adv_success_before": false,
+    "defended_label_on_orig": 0,
+    "defended_label_on_adv": 0,
+    "defense_detected_on_orig": false,
+    "defense_detected_on_adv": false
+  },
+  {
+    "image": "cast_ok_0_1021.jpeg",
+    "class_dir": "ok_front",
+    "orig_label": 0,
+    "adv_success_before": false,
+    "defended_label_on_orig": 0,
+    "defended_label_on_adv": 0,
+    "defense_detected_on_orig": false,
+    "defense_detected_on_adv": false
+  },
+  {
+    "image": "cast_ok_0_1028.jpeg",
+    "class_dir": "ok_front",
+    "orig_label": 0,
+    "adv_success_before": false,
+    "defended_label_on_orig": 0,
+    "defended_label_on_adv": 0,
+    "defense_detected_on_orig": false,
+    "defense_detected_on_adv": false
+  }
+]
